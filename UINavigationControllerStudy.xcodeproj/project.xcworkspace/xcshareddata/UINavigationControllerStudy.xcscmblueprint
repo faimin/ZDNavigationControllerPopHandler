@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "066DE1E855D83F75E03121189A58DA5C8E8ADDCF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "066DE1E855D83F75E03121189A58DA5C8E8ADDCF" : 0,
+    "E329E12008D67B0E310038A11A5272110E31A97F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "34E18808-8AC2-4D0D-9E74-E6BDAFF6B35F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "066DE1E855D83F75E03121189A58DA5C8E8ADDCF" : "UINavigationController-ZDPop\/",
+    "E329E12008D67B0E310038A11A5272110E31A97F" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "UINavigationControllerStudy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "UINavigationControllerStudy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/faimin\/UINavigationController-ZDPop.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "066DE1E855D83F75E03121189A58DA5C8E8ADDCF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/faimin\/LibClass.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E329E12008D67B0E310038A11A5272110E31A97F"
+    }
+  ]
+}
