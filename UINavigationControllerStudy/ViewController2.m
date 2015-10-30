@@ -69,6 +69,10 @@ fprintf(stderr, "-----------------\n");                                     \
     return NO;
 }
 
+- (NSString *)navigationItemBackBarButtonTitle
+{
+    return @"你好";
+}
 
 /*
  * #pragma mark - Navigation
