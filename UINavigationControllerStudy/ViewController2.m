@@ -7,69 +7,77 @@
 //
 
 #import "ViewController2.h"
-#import "UINavigationController+ZDPop.h"
+#import "ViewController3.h"
+//#import "UIViewController+ZDBackButtonHandler.h"
 
-@interface ViewController2 ()<UINavigationControllerShouldPop, UINavigationBarDelegate>
+
+#define NSLog(format, ...) do {                                             \
+fprintf(stderr, "<%s : %d> %s\n",                                           \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__);                                                        \
+(NSLog)((format), ##__VA_ARGS__);                                           \
+fprintf(stderr, "-----------------\n");                                     \
+} while (0)
+
+
+
+@interface ViewController2 () 
 
 @end
 
 @implementation ViewController2
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [UIColor redColor];
-    
-    UIButton *back = [[UIButton alloc] initWithFrame:(CGRect){50, 100, 100, 30}];
-    back.backgroundColor = [UIColor purpleColor];
-    [back setTitle:@"返回" forState:UIControlStateNormal];
-    [back addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:back];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)back
+- (void)viewDidLoad
 {
-    
+	[super viewDidLoad];
+	// Do any additional setup after loading the view.
+
+	self.view.backgroundColor = [UIColor redColor];
+
+	UIButton *push = [[UIButton alloc] initWithFrame:(CGRect) {50, 100, 100, 30}];
+	push.backgroundColor = [UIColor purpleColor];
+	[push setTitle:@"下一步" forState:UIControlStateNormal];
+	[push addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:push];
+
 }
 
-- (BOOL)navigationControllerShouldPop:(UINavigationController *)navigatonController
+- (void)didReceiveMemoryWarning
 {
-    UIViewController *viewc = self.navigationController;
-    if ([viewc isEqual:navigatonController])
-    {
-        NSLog(@"YES");
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
+}
+
+- (void)push
+{
+	[self.navigationController pushViewController:[ViewController3 new] animated:YES];
+}
+
+
+- (BOOL)navigationControllerShouldPop:(UINavigationController *)navigationController
+{
+    if ([self.navigationController isEqual:navigationController]) {
+        NSLog(@"是同一个导航控制器");
     }
     
-    for (UIViewController *vc in self.navigationController.viewControllers)
-    {
-        if ([vc isKindOfClass:NSClassFromString(@"ViewController")])
-        {
-            [navigatonController popToViewController:vc animated:YES];
+    for (UIViewController *vc in self.navigationController.viewControllers) {
+        if ([vc isKindOfClass:NSClassFromString(@"ViewController")]) {
+            [self.navigationController popToViewController:vc animated:YES];
             break;
         }
     }
-    
-    //MARK:此处返回NO，返回YES的话会报导航子视图可能损坏的错误
     return NO;
 }
 
 
-
-
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ * #pragma mark - Navigation
+ *
+ *  // In a storyboard-based application, you will often want to do a little preparation before navigation
+ *  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ *   // Get the new view controller using [segue destinationViewController].
+ *   // Pass the selected object to the new view controller.
+ *  }
+ */
 
 @end
