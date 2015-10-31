@@ -51,6 +51,10 @@ fprintf(stderr, "-----------------\n");                                     \
 - (void)push
 {
 	[self.navigationController pushViewController:[ViewController3 new] animated:YES];
+    ViewController3 *vc3 = [ViewController3 new];
+//    [self presentViewController:[ViewController3 new] animated:YES completion:^{
+//        NSLog(@"\n\n\n**************%@\n\n======%@", [vc3.presentingViewController class], [self.presentedViewController class]);
+//    }];
 }
 
 
