@@ -9,10 +9,10 @@
 #import "ViewController2.h"
 #import "ViewController3.h"
 //#import "UIViewController+ZDBackButtonHandler.h"
-
+#import "Aspects.h"
 
 #define NSLog(format, ...) do {                                             \
-fprintf(stderr, "<%s : %d> %s\n",                                           \
+fprintf(stderr, "<%s : %d>\n%s\n",                                           \
 [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
 __LINE__, __func__);                                                        \
 (NSLog)((format), ##__VA_ARGS__);                                           \
@@ -39,6 +39,10 @@ fprintf(stderr, "-----------------\n");                                     \
 	[push setTitle:@"下一步" forState:UIControlStateNormal];
 	[push addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:push];
+    
+    [self aspect_hookSelector:@selector(push) withOptions:AspectPositionInstead usingBlock:^ (id<AspectInfo>info) {
+        NSLog(@"push le");
+    } error:nil];
 
 }
 
