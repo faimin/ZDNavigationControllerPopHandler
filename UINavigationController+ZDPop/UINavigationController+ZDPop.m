@@ -37,14 +37,13 @@ static NSString *const originDelegate = @"originDelegate";
 
 - (BOOL)zd_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item
 {
-	UIViewController *vc = self.topViewController;
-
-	if (item != vc.navigationItem) {
+	UIViewController *topVC = self.topViewController;
+	if (item != topVC.navigationItem) {
 		return YES;
 	}
 
-	if ([vc conformsToProtocol:@protocol(UINavigationBarDelegate)]) {
-		if ([(id < UINavigationControllerShouldPop >)vc navigationControllerShouldPop:self]) {
+	if ([topVC conformsToProtocol:@protocol(UINavigationBarDelegate)]) {
+		if ([(id < UINavigationControllerShouldPop >)topVC navigationControllerShouldPop:self]) {
 			return [self zd_navigationBar:navigationBar shouldPopItem:item];
 		}
 		else {

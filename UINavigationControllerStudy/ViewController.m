@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ViewController1.h"
+#import "UINavigationBar+Awesome.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor purpleColor]];
+    
     self.view.backgroundColor = [UIColor yellowColor];
     
     UIButton *back = [[UIButton alloc] initWithFrame:(CGRect){50, 100, 100, 30}];
@@ -25,6 +28,12 @@
     [back setTitle:@"下一步" forState:UIControlStateNormal];
     [back addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:back];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor purpleColor]];
 }
 
 - (void)didReceiveMemoryWarning {

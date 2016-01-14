@@ -10,6 +10,7 @@
 #import "ViewController3.h"
 //#import "UIViewController+ZDBackButtonHandler.h"
 #import "Aspects.h"
+#import "UINavigationBar+Awesome.h"
 
 #define NSLog(format, ...) do {                                             \
 fprintf(stderr, "<%s : %d>\n%s\n",                                           \
@@ -31,6 +32,7 @@ fprintf(stderr, "-----------------\n");                                     \
 {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor greenColor]];
 
 	self.view.backgroundColor = [UIColor redColor];
 
@@ -46,6 +48,12 @@ fprintf(stderr, "-----------------\n");                                     \
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor greenColor]];
+}
+
 - (void)didReceiveMemoryWarning
 {
 	[super didReceiveMemoryWarning];
@@ -55,7 +63,7 @@ fprintf(stderr, "-----------------\n");                                     \
 - (void)push
 {
 	[self.navigationController pushViewController:[ViewController3 new] animated:YES];
-    ViewController3 *vc3 = [ViewController3 new];
+//    ViewController3 *vc3 = [ViewController3 new];
 //    [self presentViewController:[ViewController3 new] animated:YES completion:^{
 //        NSLog(@"\n\n\n**************%@\n\n======%@", [vc3.presentingViewController class], [self.presentedViewController class]);
 //    }];

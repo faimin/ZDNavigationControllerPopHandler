@@ -20,6 +20,8 @@
 		051884C11BDCF58300431D5A /* UINavigationController+ZDPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 051884C01BDCF58300431D5A /* UINavigationController+ZDPop.m */; };
 		BC5C923D1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */; };
 		BC5C92401BE315B80008494E /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5C923F1BE315B80008494E /* ViewController3.m */; };
+		BC77C05D1C47BD4400C15349 /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC77C05A1C47BD4400C15349 /* DSNavigationBar.m */; };
+		BC77C05E1C47BD4400C15349 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = BC77C05C1C47BD4400C15349 /* UINavigationBar+Awesome.m */; };
 		BCDC974A1BE4B31A00B1023E /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC97491BE4B31A00B1023E /* Aspects.m */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZDBackButtonHandler.m"; sourceTree = "<group>"; };
 		BC5C923E1BE315B80008494E /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		BC5C923F1BE315B80008494E /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		BC77C0591C47BD4400C15349 /* DSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNavigationBar.h; sourceTree = "<group>"; };
+		BC77C05A1C47BD4400C15349 /* DSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNavigationBar.m; sourceTree = "<group>"; };
+		BC77C05B1C47BD4400C15349 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		BC77C05C1C47BD4400C15349 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		BCDC97481BE4B31A00B1023E /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		BCDC97491BE4B31A00B1023E /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				051884BE1BDCF58300431D5A /* UINavigationController+ZDPop */,
+				BC77C0581C47BD4400C15349 /* NavigationBar */,
 				051884771BDCD92E00431D5A /* UINavigationControllerStudy */,
 				051884911BDCD92E00431D5A /* UINavigationControllerStudyTests */,
 				0518849C1BDCD92E00431D5A /* UINavigationControllerStudyUITests */,
@@ -176,6 +183,17 @@
 				BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */,
 			);
 			path = "UINavigationController+ZDPop";
+			sourceTree = "<group>";
+		};
+		BC77C0581C47BD4400C15349 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				BC77C0591C47BD4400C15349 /* DSNavigationBar.h */,
+				BC77C05A1C47BD4400C15349 /* DSNavigationBar.m */,
+				BC77C05B1C47BD4400C15349 /* UINavigationBar+Awesome.h */,
+				BC77C05C1C47BD4400C15349 /* UINavigationBar+Awesome.m */,
+			);
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +334,8 @@
 				0518847D1BDCD92E00431D5A /* AppDelegate.m in Sources */,
 				0518847A1BDCD92E00431D5A /* main.m in Sources */,
 				BC5C92401BE315B80008494E /* ViewController3.m in Sources */,
+				BC77C05E1C47BD4400C15349 /* UINavigationBar+Awesome.m in Sources */,
+				BC77C05D1C47BD4400C15349 /* DSNavigationBar.m in Sources */,
 				051884B61BDCE38F00431D5A /* ViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

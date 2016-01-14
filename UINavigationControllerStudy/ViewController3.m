@@ -8,6 +8,7 @@
 
 #import "ViewController3.h"
 #import "UINavigationController+ZDPop.h"
+#import "UINavigationBar+Awesome.h"
 
 @interface ViewController3 () <UINavigationControllerShouldPop, UINavigationBarDelegate>
 
@@ -19,7 +20,8 @@
 {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
-
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor blueColor]];
+    
 	self.view.backgroundColor = [UIColor orangeColor];
 
 	UIButton *push = [[UIButton alloc] initWithFrame:(CGRect) {50, 100, 100, 30}];
@@ -29,6 +31,12 @@
 	[self.view addSubview:push];
 
 	NSLog(@"\n\n\n**************%@", [self.presentingViewController class]);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor blueColor]];
 }
 
 - (void)didReceiveMemoryWarning

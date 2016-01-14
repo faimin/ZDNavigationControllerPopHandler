@@ -11,8 +11,8 @@
 @protocol UINavigationControllerShouldPop <NSObject>
 
 - (BOOL)navigationControllerShouldPop:(UINavigationController *)navigatonController;
-@optional
-- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController;
+//@optional
+//- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController;
 
 @end
 
