@@ -3,7 +3,7 @@
 //  UINavigationControllerStudy
 //
 //  Created by 符现超 on 15/10/30.
-//  Copyright © 2015年 Fate.D.Bourne. All rights reserved.
+//  Copyright © 2015年 Zero.D.Bourne. All rights reserved.
 //
 
 #import "UIViewController+ZDBackButtonHandler.h"
@@ -22,7 +22,6 @@
 
 	BOOL shouldPop = YES;
 	UIViewController *vc = [self topViewController];
-
 	if ([vc respondsToSelector:@selector(navigationControllerShouldPop:)]) {
 		shouldPop = [vc navigationControllerShouldPop:self];
 	}
@@ -50,13 +49,11 @@
 {
 	UIViewController *viewController = self.viewControllers.count > 1 ?	\
 		[self.viewControllers objectAtIndex:self.viewControllers.count - 2] : nil;
-
 	if (!viewController) {
 		return YES;
 	}
 
 	NSString *backButtonTitle = nil;
-
 	if ([viewController respondsToSelector:@selector(navigationItemBackBarButtonTitle)]) {
 		backButtonTitle = [viewController navigationItemBackBarButtonTitle];
 	}
@@ -66,10 +63,10 @@
 	}
 
 	UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:backButtonTitle
-		style:UIBarButtonItemStylePlain
-		target:nil action:nil];
+                                                                       style:UIBarButtonItemStylePlain
+                                                                      target:nil
+                                                                      action:nil];
 	viewController.navigationItem.backBarButtonItem = backButtonItem;
-
 	return YES;
 }
 

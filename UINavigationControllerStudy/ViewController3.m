@@ -7,10 +7,10 @@
 //
 
 #import "ViewController3.h"
-#import "UINavigationController+ZDPop.h"
 #import "UINavigationBar+Awesome.h"
+#import "UIViewController+ZDPop.h"
 
-@interface ViewController3 () <UINavigationControllerShouldPop, UINavigationBarDelegate>
+@interface ViewController3 ()
 
 @end
 
@@ -21,8 +21,8 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor blueColor]];
-    
-	self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor orangeColor];
+    self.title = @"3";
 
 	UIButton *push = [[UIButton alloc] initWithFrame:(CGRect) {50, 100, 100, 30}];
 	push.backgroundColor = [UIColor purpleColor];
@@ -57,7 +57,6 @@
 - (BOOL)navigationControllerShouldPop:(UINavigationController *)navigatonController
 {
 	UIViewController *viewc = self.navigationController;
-
 	if ([viewc isEqual:navigatonController]) {
 		NSLog(@"YES");
 	}
@@ -72,6 +71,18 @@
 	//MARK:此处返回NO，返回YES的话会报导航子视图可能损坏的错误
 	return NO;
 }
+
+- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController
+{
+    for (UIViewController *vc in self.navigationController.viewControllers) {
+        if ([vc isKindOfClass:NSClassFromString(@"ViewController1")]) {
+            [navigatonController popToViewController:vc animated:YES];
+            break;
+        }
+    }
+    return NO;
+}
+
 
 /*
  * #pragma mark - Navigation

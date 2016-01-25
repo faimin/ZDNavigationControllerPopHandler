@@ -22,6 +22,7 @@
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor purpleColor]];
     
     self.view.backgroundColor = [UIColor yellowColor];
+    self.title = @"0";
     
     UIButton *back = [[UIButton alloc] initWithFrame:(CGRect){50, 100, 100, 30}];
     back.backgroundColor = [UIColor purpleColor];

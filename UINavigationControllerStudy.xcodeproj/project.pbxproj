@@ -17,7 +17,7 @@
 		0518849E1BDCD92E00431D5A /* UINavigationControllerStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518849D1BDCD92E00431D5A /* UINavigationControllerStudyUITests.m */; };
 		051884B31BDCE38100431D5A /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 051884B21BDCE38100431D5A /* ViewController1.m */; };
 		051884B61BDCE38F00431D5A /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 051884B51BDCE38F00431D5A /* ViewController2.m */; };
-		051884C11BDCF58300431D5A /* UINavigationController+ZDPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 051884C01BDCF58300431D5A /* UINavigationController+ZDPop.m */; };
+		BC5571B81C56042000019326 /* UIViewController+ZDPop.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5571B71C56042000019326 /* UIViewController+ZDPop.m */; };
 		BC5C923D1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */; };
 		BC5C92401BE315B80008494E /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5C923F1BE315B80008494E /* ViewController3.m */; };
 		BC77C05D1C47BD4400C15349 /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC77C05A1C47BD4400C15349 /* DSNavigationBar.m */; };
@@ -63,8 +63,8 @@
 		051884B21BDCE38100431D5A /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		051884B41BDCE38F00431D5A /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		051884B51BDCE38F00431D5A /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
-		051884BF1BDCF58300431D5A /* UINavigationController+ZDPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZDPop.h"; sourceTree = "<group>"; };
-		051884C01BDCF58300431D5A /* UINavigationController+ZDPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ZDPop.m"; sourceTree = "<group>"; };
+		BC5571B61C56042000019326 /* UIViewController+ZDPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZDPop.h"; sourceTree = "<group>"; };
+		BC5571B71C56042000019326 /* UIViewController+ZDPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZDPop.m"; sourceTree = "<group>"; };
 		BC5C923B1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZDBackButtonHandler.h"; sourceTree = "<group>"; };
 		BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZDBackButtonHandler.m"; sourceTree = "<group>"; };
 		BC5C923E1BE315B80008494E /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 			children = (
 				BCDC97481BE4B31A00B1023E /* Aspects.h */,
 				BCDC97491BE4B31A00B1023E /* Aspects.m */,
-				051884BF1BDCF58300431D5A /* UINavigationController+ZDPop.h */,
-				051884C01BDCF58300431D5A /* UINavigationController+ZDPop.m */,
+				BC5571B61C56042000019326 /* UIViewController+ZDPop.h */,
+				BC5571B71C56042000019326 /* UIViewController+ZDPop.m */,
 				BC5C923B1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.h */,
 				BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */,
 			);
@@ -327,13 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				051884B31BDCE38100431D5A /* ViewController1.m in Sources */,
-				051884C11BDCF58300431D5A /* UINavigationController+ZDPop.m in Sources */,
 				BCDC974A1BE4B31A00B1023E /* Aspects.m in Sources */,
 				BC5C923D1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m in Sources */,
 				051884801BDCD92E00431D5A /* ViewController.m in Sources */,
 				0518847D1BDCD92E00431D5A /* AppDelegate.m in Sources */,
 				0518847A1BDCD92E00431D5A /* main.m in Sources */,
 				BC5C92401BE315B80008494E /* ViewController3.m in Sources */,
+				BC5571B81C56042000019326 /* UIViewController+ZDPop.m in Sources */,
 				BC77C05E1C47BD4400C15349 /* UINavigationBar+Awesome.m in Sources */,
 				BC77C05D1C47BD4400C15349 /* DSNavigationBar.m in Sources */,
 				051884B61BDCE38F00431D5A /* ViewController2.m in Sources */,

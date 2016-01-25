@@ -20,8 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor redColor]];
-    
     self.view.backgroundColor = [UIColor greenColor];
+    self.title = @"1";
     
     UIButton *back = [[UIButton alloc] initWithFrame:(CGRect){50, 100, 100, 30}];
     back.backgroundColor = [UIColor purpleColor];

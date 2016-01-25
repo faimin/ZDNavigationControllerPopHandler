@@ -13,7 +13,7 @@
 #import "UINavigationBar+Awesome.h"
 
 #define NSLog(format, ...) do {                                             \
-fprintf(stderr, "<%s : %d>\n%s\n",                                           \
+fprintf(stderr, "<%s : %d>\n%s\n",                                          \
 [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
 __LINE__, __func__);                                                        \
 (NSLog)((format), ##__VA_ARGS__);                                           \
@@ -33,8 +33,8 @@ fprintf(stderr, "-----------------\n");                                     \
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor greenColor]];
-
-	self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor redColor];
+    self.title = @"2";
 
 	UIButton *push = [[UIButton alloc] initWithFrame:(CGRect) {50, 100, 100, 30}];
 	push.backgroundColor = [UIColor purpleColor];
@@ -42,7 +42,7 @@ fprintf(stderr, "-----------------\n");                                     \
 	[push addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:push];
     
-    [self aspect_hookSelector:@selector(push) withOptions:AspectPositionInstead usingBlock:^ (id<AspectInfo>info) {
+    [self aspect_hookSelector:@selector(push) withOptions:AspectPositionBefore usingBlock:^ (id<AspectInfo>info) {
         NSLog(@"push le");
     } error:nil];
 
@@ -72,13 +72,20 @@ fprintf(stderr, "-----------------\n");                                     \
 
 - (BOOL)navigationControllerShouldPop:(UINavigationController *)navigationController
 {
-    if ([self.navigationController isEqual:navigationController]) {
-        NSLog(@"是同一个导航控制器");
-    }
-    
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:NSClassFromString(@"ViewController")]) {
             [self.navigationController popToViewController:vc animated:YES];
+            break;
+        }
+    }
+    return NO;
+}
+
+- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController
+{
+    for (UIViewController *vc in self.navigationController.viewControllers) {
+        if ([vc isKindOfClass:NSClassFromString(@"ViewController1")]) {
+            [navigatonController popToViewController:vc animated:YES];
             break;
         }
     }
