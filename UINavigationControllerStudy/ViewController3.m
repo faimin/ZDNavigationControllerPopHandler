@@ -7,7 +7,6 @@
 //
 
 #import "ViewController3.h"
-#import "UINavigationBar+Awesome.h"
 #import "UIViewController+ZDPop.h"
 
 @interface ViewController3 ()
@@ -20,7 +19,7 @@
 {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor blueColor]];
+    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];;
     self.view.backgroundColor = [UIColor orangeColor];
     self.title = @"3";
 
@@ -36,7 +35,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor blueColor]];
 }
 
 - (void)didReceiveMemoryWarning

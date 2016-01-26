@@ -8,9 +8,8 @@
 
 #import "ViewController2.h"
 #import "ViewController3.h"
-//#import "UIViewController+ZDBackButtonHandler.h"
 #import "Aspects.h"
-#import "UINavigationBar+Awesome.h"
+
 
 #define NSLog(format, ...) do {                                             \
 fprintf(stderr, "<%s : %d>\n%s\n",                                          \
@@ -32,7 +31,7 @@ fprintf(stderr, "-----------------\n");                                     \
 {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor greenColor]];
+    self.navigationController.navigationBar.barTintColor = [UIColor greenColor];
     self.view.backgroundColor = [UIColor redColor];
     self.title = @"2";
 
@@ -51,7 +50,6 @@ fprintf(stderr, "-----------------\n");                                     \
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor greenColor]];
 }
 
 - (void)didReceiveMemoryWarning

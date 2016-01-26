@@ -17,11 +17,11 @@
 		0518849E1BDCD92E00431D5A /* UINavigationControllerStudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0518849D1BDCD92E00431D5A /* UINavigationControllerStudyUITests.m */; };
 		051884B31BDCE38100431D5A /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 051884B21BDCE38100431D5A /* ViewController1.m */; };
 		051884B61BDCE38F00431D5A /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 051884B51BDCE38F00431D5A /* ViewController2.m */; };
+		BC167DA31C57205800CF82F1 /* UINavigationController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BC167DA01C57205800CF82F1 /* UINavigationController+KMNavigationBarTransition.m */; };
+		BC167DA41C57205800CF82F1 /* UIViewController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BC167DA21C57205800CF82F1 /* UIViewController+KMNavigationBarTransition.m */; };
 		BC5571B81C56042000019326 /* UIViewController+ZDPop.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5571B71C56042000019326 /* UIViewController+ZDPop.m */; };
 		BC5C923D1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */; };
 		BC5C92401BE315B80008494E /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5C923F1BE315B80008494E /* ViewController3.m */; };
-		BC77C05D1C47BD4400C15349 /* DSNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BC77C05A1C47BD4400C15349 /* DSNavigationBar.m */; };
-		BC77C05E1C47BD4400C15349 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = BC77C05C1C47BD4400C15349 /* UINavigationBar+Awesome.m */; };
 		BCDC974A1BE4B31A00B1023E /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDC97491BE4B31A00B1023E /* Aspects.m */; };
 /* End PBXBuildFile section */
 
@@ -63,16 +63,16 @@
 		051884B21BDCE38100431D5A /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		051884B41BDCE38F00431D5A /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		051884B51BDCE38F00431D5A /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		BC167D9F1C57205800CF82F1 /* UINavigationController+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
+		BC167DA01C57205800CF82F1 /* UINavigationController+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
+		BC167DA11C57205800CF82F1 /* UIViewController+KMNavigationBarTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KMNavigationBarTransition.h"; sourceTree = "<group>"; };
+		BC167DA21C57205800CF82F1 /* UIViewController+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
 		BC5571B61C56042000019326 /* UIViewController+ZDPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZDPop.h"; sourceTree = "<group>"; };
 		BC5571B71C56042000019326 /* UIViewController+ZDPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZDPop.m"; sourceTree = "<group>"; };
 		BC5C923B1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZDBackButtonHandler.h"; sourceTree = "<group>"; };
 		BC5C923C1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZDBackButtonHandler.m"; sourceTree = "<group>"; };
 		BC5C923E1BE315B80008494E /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
 		BC5C923F1BE315B80008494E /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
-		BC77C0591C47BD4400C15349 /* DSNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNavigationBar.h; sourceTree = "<group>"; };
-		BC77C05A1C47BD4400C15349 /* DSNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNavigationBar.m; sourceTree = "<group>"; };
-		BC77C05B1C47BD4400C15349 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
-		BC77C05C1C47BD4400C15349 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		BCDC97481BE4B31A00B1023E /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
 		BCDC97491BE4B31A00B1023E /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,8 +105,8 @@
 		0518846C1BDCD92E00431D5A = {
 			isa = PBXGroup;
 			children = (
+				BC167D9E1C57205800CF82F1 /* KMNavigationBarTransition */,
 				051884BE1BDCF58300431D5A /* UINavigationController+ZDPop */,
-				BC77C0581C47BD4400C15349 /* NavigationBar */,
 				051884771BDCD92E00431D5A /* UINavigationControllerStudy */,
 				051884911BDCD92E00431D5A /* UINavigationControllerStudyTests */,
 				0518849C1BDCD92E00431D5A /* UINavigationControllerStudyUITests */,
@@ -185,15 +185,15 @@
 			path = "UINavigationController+ZDPop";
 			sourceTree = "<group>";
 		};
-		BC77C0581C47BD4400C15349 /* NavigationBar */ = {
+		BC167D9E1C57205800CF82F1 /* KMNavigationBarTransition */ = {
 			isa = PBXGroup;
 			children = (
-				BC77C0591C47BD4400C15349 /* DSNavigationBar.h */,
-				BC77C05A1C47BD4400C15349 /* DSNavigationBar.m */,
-				BC77C05B1C47BD4400C15349 /* UINavigationBar+Awesome.h */,
-				BC77C05C1C47BD4400C15349 /* UINavigationBar+Awesome.m */,
+				BC167D9F1C57205800CF82F1 /* UINavigationController+KMNavigationBarTransition.h */,
+				BC167DA01C57205800CF82F1 /* UINavigationController+KMNavigationBarTransition.m */,
+				BC167DA11C57205800CF82F1 /* UIViewController+KMNavigationBarTransition.h */,
+				BC167DA21C57205800CF82F1 /* UIViewController+KMNavigationBarTransition.m */,
 			);
-			path = NavigationBar;
+			path = KMNavigationBarTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,15 +327,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				051884B31BDCE38100431D5A /* ViewController1.m in Sources */,
+				BC167DA31C57205800CF82F1 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				BCDC974A1BE4B31A00B1023E /* Aspects.m in Sources */,
+				BC167DA41C57205800CF82F1 /* UIViewController+KMNavigationBarTransition.m in Sources */,
 				BC5C923D1BE311FA0008494E /* UIViewController+ZDBackButtonHandler.m in Sources */,
 				051884801BDCD92E00431D5A /* ViewController.m in Sources */,
 				0518847D1BDCD92E00431D5A /* AppDelegate.m in Sources */,
 				0518847A1BDCD92E00431D5A /* main.m in Sources */,
 				BC5C92401BE315B80008494E /* ViewController3.m in Sources */,
 				BC5571B81C56042000019326 /* UIViewController+ZDPop.m in Sources */,
-				BC77C05E1C47BD4400C15349 /* UINavigationBar+Awesome.m in Sources */,
-				BC77C05D1C47BD4400C15349 /* DSNavigationBar.m in Sources */,
 				051884B61BDCE38F00431D5A /* ViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

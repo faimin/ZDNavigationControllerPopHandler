@@ -8,7 +8,6 @@
 
 #import "ViewController1.h"
 #import "ViewController2.h"
-#import "UINavigationBar+Awesome.h"
 
 @interface ViewController1 ()
 
@@ -19,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor redColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
     self.view.backgroundColor = [UIColor greenColor];
     self.title = @"1";
     
@@ -33,7 +32,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor redColor]];
 }
 
 
