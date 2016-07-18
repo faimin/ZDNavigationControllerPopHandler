@@ -52,7 +52,7 @@
 	}
 }
 
-- (BOOL)navigationControllerShouldPop:(UINavigationController *)navigatonController
+- (BOOL)zd_navigationControllerShouldPop:(UINavigationController *)navigatonController
 {
 	UIViewController *viewc = self.navigationController;
 	if ([viewc isEqual:navigatonController]) {
@@ -70,7 +70,7 @@
 	return NO;
 }
 
-- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController
+- (BOOL)zd_navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController
 {
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:NSClassFromString(@"ViewController1")]) {

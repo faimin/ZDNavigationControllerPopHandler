@@ -49,16 +49,19 @@ static void ZD_SwizzlePopInstanceSelector(Class aClass, SEL originalSelector, SE
     self.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
 }
 
+#pragma mark - (Swizz)UINavigationBarDelegate
+
 - (BOOL)zd_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item
 {
     UIViewController *topVC = self.topViewController;
     if (item != topVC.navigationItem) {
         return YES;
     }
-
-    if ([topVC respondsToSelector:@selector(navigationControllerShouldPop:)]) {
-        /// 实现此协议方法的控制器要返回NO，这样才能替换系统原来的返回方法
-        BOOL systemPop = [(id <UINavigationControllerShouldPop>)topVC navigationControllerShouldPop:self];
+    
+    /// 不响应协议方法的控制器，则执行系统原来的pop方法
+    if ([topVC respondsToSelector:@selector(zd_navigationControllerShouldPop:)]) {
+        /// 实现此协议的控制器要返回NO，这样才能替换系统原来的返回方法
+        BOOL systemPop = [(id <UINavigationControllerShouldPop>)topVC zd_navigationControllerShouldPop:self];
         if (systemPop) {
             return [self zd_navigationBar:navigationBar shouldPopItem:item];
         }
@@ -71,17 +74,19 @@ static void ZD_SwizzlePopInstanceSelector(Class aClass, SEL originalSelector, SE
     }
 }
 
+#pragma mark - UIGestureRecognizerDelegate
+
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer == self.interactivePopGestureRecognizer) {
         UIViewController *topVC = self.topViewController;
-        if ([topVC respondsToSelector:@selector(navigationControllerShouldStarInteractivePopGestureRecognizer:)]) {
+        if ([topVC respondsToSelector:@selector(zd_navigationControllerShouldStarInteractivePopGestureRecognizer:)]) {
 #if MergeGestureToBackMethod
-            if (![(id<UINavigationControllerShouldPop>)topVC navigationControllerShouldPop:self]) {
+            if (![(id<UINavigationControllerShouldPop>)topVC zd_navigationControllerShouldPop:self]) {
                 return NO;
             }
 #else
-            if ([(id<UINavigationControllerShouldPop>)vc navigationControllerShouldStarInteractivePopGestureRecognizer:self]) {
+            if ([(id<UINavigationControllerShouldPop>)vc zd_navigationControllerShouldStarInteractivePopGestureRecognizer:self]) {
                 return NO;
             }
 #endif

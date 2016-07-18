@@ -13,8 +13,9 @@
 #pragma mark - Protocol
 @protocol UINavigationControllerShouldPop <NSObject>
 @optional
-- (BOOL)navigationControllerShouldPop:(UINavigationController *)navigatonController;
-- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController;
+///  must return NO if viewController response to the method
+- (BOOL)zd_navigationControllerShouldPop:(UINavigationController *)navigatonController;
+- (BOOL)zd_navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController;
 @end
 
 #pragma mark - Category

@@ -68,7 +68,7 @@ fprintf(stderr, "-----------------\n");                                     \
 }
 
 
-- (BOOL)navigationControllerShouldPop:(UINavigationController *)navigationController
+- (BOOL)zd_navigationControllerShouldPop:(UINavigationController *)navigationController
 {
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:NSClassFromString(@"ViewController")]) {
@@ -79,7 +79,7 @@ fprintf(stderr, "-----------------\n");                                     \
     return NO;
 }
 
-- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController
+- (BOOL)zd_navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController
 {
     for (UIViewController *vc in self.navigationController.viewControllers) {
         if ([vc isKindOfClass:NSClassFromString(@"ViewController1")]) {
