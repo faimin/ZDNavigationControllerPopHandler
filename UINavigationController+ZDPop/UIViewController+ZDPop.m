@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 #pragma mark - key && Function
-static void *originDelegateKey = &originDelegateKey;
+static void *OriginDelegateKey = &OriginDelegateKey;
 
 static void ZD_SwizzlePopInstanceSelector(Class aClass, SEL originalSelector, SEL newSelector)
 {
@@ -45,7 +45,10 @@ static void ZD_SwizzlePopInstanceSelector(Class aClass, SEL originalSelector, SE
 {
     [self zd_viewDidLoad];
     
-    objc_setAssociatedObject(self, originDelegateKey, self.interactivePopGestureRecognizer.delegate, OBJC_ASSOCIATION_ASSIGN);
+    /// 先把导航控制以前的手势代理保存起来，然后再把当前的控制器设为它的代理
+    /// 当 当前控制器释放的时候还要把原来的代理赋值回导航控制器
+    /// 这么做是因为iOS不支持多重代理（ps：利用消息转发机制能实现多重代理）
+    objc_setAssociatedObject(self, OriginDelegateKey, self.interactivePopGestureRecognizer.delegate, OBJC_ASSOCIATION_ASSIGN);
     self.interactivePopGestureRecognizer.delegate = (id<UIGestureRecognizerDelegate>)self;
 }
 
@@ -91,7 +94,7 @@ static void ZD_SwizzlePopInstanceSelector(Class aClass, SEL originalSelector, SE
             }
 #endif
         }
-        id<UIGestureRecognizerDelegate> originDelegate = objc_getAssociatedObject(self, originDelegateKey);
+        id<UIGestureRecognizerDelegate> originDelegate = objc_getAssociatedObject(self, OriginDelegateKey);
         return [originDelegate gestureRecognizerShouldBegin:gestureRecognizer];
     }
     return YES;
@@ -100,7 +103,7 @@ static void ZD_SwizzlePopInstanceSelector(Class aClass, SEL originalSelector, SE
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
     if (gestureRecognizer == self.interactivePopGestureRecognizer) {
-        id<UIGestureRecognizerDelegate> originDelegeate = objc_getAssociatedObject(self, originDelegateKey);
+        id<UIGestureRecognizerDelegate> originDelegeate = objc_getAssociatedObject(self, OriginDelegateKey);
         return [originDelegeate gestureRecognizer:gestureRecognizer shouldReceiveTouch:touch];
     }
     return YES;
@@ -109,7 +112,7 @@ static void ZD_SwizzlePopInstanceSelector(Class aClass, SEL originalSelector, SE
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
     if (gestureRecognizer == self.interactivePopGestureRecognizer) {
-        id<UIGestureRecognizerDelegate> originDelegeate = objc_getAssociatedObject(self, originDelegateKey);
+        id<UIGestureRecognizerDelegate> originDelegeate = objc_getAssociatedObject(self, OriginDelegateKey);
         return [originDelegeate gestureRecognizer:gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:otherGestureRecognizer];
     }
     return YES;
