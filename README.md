@@ -5,7 +5,11 @@
 - (BOOL)navigationControllerShouldPop:(UINavigationController *)navigatonController;
 - (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController;
 ```
-在.h文件中我定义了一个宏 `MergeGestureToBackMethod` ，控制点按钮返回和手势返回是否执行同一个代理方法，默认是`YES`，即不用实现 `- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController;` 协议。
+在.h文件中我定义了一个宏 `MergeGestureToBackMethod` ，控制点按钮返回和手势返回是否执行同一个代理方法，默认是`YES`，即不用实现 
+```objc
+- (BOOL)navigationControllerShouldStarInteractivePopGestureRecognizer:(UINavigationController *)navigatonController;
+````
+协议。
 
 
 
